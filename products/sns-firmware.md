@@ -65,16 +65,16 @@ releases:
     eoas: 2021-04-06
     eol: 2021-04-06
 
--   releaseCycle: "4.0"
-    releaseDate: 2020-01-07
-    eoas: 2020-09-24
-    eol: 2020-09-24
-
 -   releaseCycle: "3.11"
     releaseDate: 2020-09-24
     eoas: 2024-06-30
     eol: 2024-06-30
     lts: true
+
+-   releaseCycle: "4.0"
+    releaseDate: 2020-01-07
+    eoas: 2020-09-24
+    eol: 2020-09-24
 
 -   releaseCycle: "3.7"
     releaseDate: 2018-09-29

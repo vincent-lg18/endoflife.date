@@ -212,6 +212,7 @@ releases:
   highestSNSVersion: ND
 
 - releaseCycle: "SNi40"
+  outOfOrder: true # because SN910 has been released after 
   releaseDate: 2016-06-01
   eoas: false
   eol: false

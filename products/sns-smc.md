@@ -83,8 +83,8 @@ releases:
 
   - releaseCycle: "3.0"
     releaseDate: 2021-06-17
-    eoas: 2021-02-03
-    eol: 2021-02-03
+    eoas: 2021-12-03 # # error on https://documentation.stormshield.eu/PLC/SNS/en/Content/SNS_Product_Life_Cycle/Matrices_SMC.htm table
+    eol: 2021-12-03 # error on https://documentation.stormshield.eu/PLC/SNS/en/Content/SNS_Product_Life_Cycle/Matrices_SMC.htm table
     lowestSNSVersion: 2.5.0
     highestSNSVersion: 4.7
 
