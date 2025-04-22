@@ -2,14 +2,21 @@
 title: Stormshield hardware
 category: device
 tags: stormshield
-iconSlug: stormshield
 permalink: /sns-hardware
-alternate_urls:
--   /sns-hardware
 releasePolicyLink: https://documentation.stormshield.eu/PLC/SNS/en/Content/SNS_Product_Life_Cycle/Matrices_firewalls.htm
-releaseColumn: Available as of
+releaseColumn: false
+releaseDateColumn: Available as of
 eoasColumn: End of Sales
 eolColumn: End of Life
+
+customColumns:
+  - property: lowestSNSVersion
+    position: after-release-column
+    description: Lowest SNS supported versions
+
+  - property: afterSNSVersion
+    position: after-release-column
+    description: After SNS supported versions
 
 auto:
   methods:
@@ -27,99 +34,99 @@ auto:
 releases:
 - releaseCycle: "SNi10"
   releaseDate: 2024-09-30
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.30/4.8.3
   highestSnSVersion: ND
 
 - releaseCycle: "SN170"
   releaseDate: 2024-09-30
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.30/4.8.3
   highestSnSVersion: ND
 
 - releaseCycle: "SN3200"
   releaseDate: 2024-06-10
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.26/4.8.1
   highestSnSVersion: ND
 
 - releaseCycle: "SN2200"
   releaseDate: 2024-06-10
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.26/4.8.1
   highestSnSVersion: ND
 
 - releaseCycle: "SN6200"
   releaseDate: 2024-05-01
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.25/4.8.1
   highestSnSVersion: ND
 
 - releaseCycle: "SN5200"
   releaseDate: 2024-05-01
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.25/4.8.1
   highestSnSVersion: ND
 
 - releaseCycle: "SN320"
   releaseDate: 2023-06-01
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.17/4.6.4
   highestSnSVersion: ND
 
 - releaseCycle: "SN220"
   releaseDate: 2023-06-01
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.17/4.6.4
   highestSnSVersion: ND
 
 - releaseCycle: "SN520"
   releaseDate: 2023-05-04
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.16/4.6.3
   highestSnSVersion: ND
 
 - releaseCycle: "SN920"
   releaseDate: 2022-09-29
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.14/4.5.3
   highestSnSVersion: ND
 
 - releaseCycle: "SN720"
   releaseDate: 2022-09-29
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.14/4.5.3
   highestSnSVersion: ND
 
 - releaseCycle: "SNxr1200"
   releaseDate: 2021-09-16
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.3.7
   highestSnSVersion: ND
 
 - releaseCycle: "SN1100"
   releaseDate: 2021-09-16
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 4.2.4
   highestSnSVersion: ND
 
 - releaseCycle: "SNi20"
   releaseDate: 2020-09-24
-  eoas: ND
-  eol: ND
+  eoas: false
+  eol: false
   lowestSNSVersion: 3.11.0
   highestSnSVersion: ND
 
@@ -149,35 +156,37 @@ releases:
   eoas: 2023-12-31
   eol: 2028-12-31
   lowestSNSVersion: 3.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN210W"
   releaseDate: 2017-03-01
   eoas: 2022-03-31
   eol: 2027-03-31
   lowestSNSVersion: 3.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN210"
+  outOfOrder: true # because SN210W has been released after 
   releaseDate: 2017-04-01
   eoas: 2023-12-31
   eol: 2028-12-31
   lowestSNSVersion: 3.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN160W"
   releaseDate: 2017-03-01
   eoas: 2022-03-31
   eol: 2027-03-31
   lowestSNSVersion: 3.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN160"
+  outOfOrder: true # because SN160W has been released after 
   releaseDate: 2017-04-01
   eoas: 2024-06-30
   eol: 2028-12-31
   lowestSNSVersion: 3.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN910"
   releaseDate: 2016-05-01
@@ -187,6 +196,7 @@ releases:
   highestSnSVersion: ND
 
 - releaseCycle: "SN710"
+  outOfOrder: true # because SN910 has been released after 
   releaseDate: 2016-10-01
   eoas: 2023-12-31
   eol: 2028-12-31
@@ -212,63 +222,63 @@ releases:
   eoas: 2019-12-31
   eol: 2024-12-31
   lowestSNSVersion: 1.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN3000"
   releaseDate: 2014-08-01
   eoas: 2019-12-31
   eol: 2024-12-31
   lowestSNSVersion: 1.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN2000"
   releaseDate: 2014-08-01
   eoas: 2019-12-31
   eol: 2024-12-31
   lowestSNSVersion: 1.1.0
-  highestSnSVersion: 4.8.x
+  highestSnSVersion: 4.8
 
 - releaseCycle: "SN300"
   releaseDate: 2014-08-01
   eoas: 2017-12-31
   eol: 2022-12-31
   lowestSNSVersion: 1.0.0
-  highestSnSVersion: 3.7.x
+  highestSnSVersion: 3.7
 
 - releaseCycle: "SN200"
   releaseDate: 2014-08-01
   eoas: 2017-12-31
   eol: 2022-12-31
   lowestSNSVersion: 1.0.0
-  highestSnSVersion: 3.7.x
+  highestSnSVersion: 3.7
 
 - releaseCycle: "SN150"
   releaseDate: 2014-08-01
   eoas: 2017-12-31
   eol: 2022-12-31
   lowestSNSVersion: 1.0.0
-  highestSnSVersion: 3.7.x
+  highestSnSVersion: 3.7
 
 - releaseCycle: "SN900"
   releaseDate: 2014-07-03
   eoas: 2016-09-30
   eol: 2021-09-30
   lowestSNSVersion: 1.0.0
-  highestSnSVersion: 3.7.x
+  highestSnSVersion: 3.7
 
 - releaseCycle: "SN700"
   releaseDate: 2014-07-03
   eoas: 2016-09-30
   eol: 2021-09-30
   lowestSNSVersion: 1.0.0
-  highestSnSVersion: 3.7.x
+  highestSnSVersion: 3.7
 
 - releaseCycle: "SN500"
   releaseDate: 2014-07-03
   eoas: 2016-09-30
   eol: 2021-09-30
   lowestSNSVersion: 1.0.0
-  highestSnSVersion: 3.7.x
+  highestSnSVersion: 3.7
 
 ---
 

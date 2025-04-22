@@ -2,13 +2,11 @@
 title: Stormshield firmware
 category: os
 tags: stormshield
-iconSlug: stormshield
 permalink: /sns-firmware
-alternate_urls:
--   /sns-firmware
 versionCommand: getversion
 releasePolicyLink: https://documentation.stormshield.eu/PLC/SNS/en/Content/SNS_Product_Life_Cycle/Matrices_firmwares.htm
-releaseColumn: Available as of
+releaseColumn: false
+releaseDateColumn: Available as of
 eoasColumn: End of Maintenance
 eolColumn: End of Life
 
@@ -28,28 +26,31 @@ auto:
 releases:
 -   releaseCycle: "4.8"
     releaseDate: 2024-07-02
-    eoas: ND
-    eol: ND
+    eoas: false
+    eol: false
 
--   releaseCycle: "4.3 - LTSB"
+-   releaseCycle: "4.3"
     releaseDate: 2022-01-12
-    eoas: ND
-    eol: ND
+    eoas: false
+    eol: false
+    lts: true
 
 -   releaseCycle: "4.7"
     releaseDate: 2023-10-31
     eoas: 2024-11-12
     eol: 2025-02-12
 
--   releaseCycle: "3.11 - LTSB"
+-   releaseCycle: "3.11"
     releaseDate: 2020-09-24
     eoas: 2024-06-30
     eol: 2024-06-30
+    lts: true
 
--   releaseCycle: "3.7 - LTSB"
+-   releaseCycle: "3.7"
     releaseDate: 2018-09-29
     eoas: 2024-06-30
     eol: 2024-06-30
+    lts: true
 
 -   releaseCycle: "4.6"
     releaseDate: 2022-11-24
@@ -81,17 +82,17 @@ releases:
     eoas: 2020-09-24
     eol: 2020-09-24
 
--   releaseCycle: "3.x"
+-   releaseCycle: "3"
     releaseDate: 2016-11-21
     eoas: 2020-09-24
     eol: 2020-09-24
 
--   releaseCycle: "2.x"
+-   releaseCycle: "2"
     releaseDate: 2015-03-31
     eoas: 2021-09-13
     eol: 2021-09-13
 
--   releaseCycle: "1.x"
+-   releaseCycle: "1"
     releaseDate: 2014-06-03
     eoas: 2015-04-24
     eol: 2015-04-24
