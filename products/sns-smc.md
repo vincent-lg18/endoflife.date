@@ -12,11 +12,11 @@ eolColumn: End of Life
 customColumns:
   - property: lowestSNSVersion
     position: after-release-column
-    description: Lowest SNS supported versions
+    label: Lowest SNS supported versions
 
-  - property: afterSNSVersion
+  - property: highestSNSVersion
     position: after-release-column
-    description: After SNS supported versions
+    label: Highest SNS supported versions
 
 auto:
   methods:
@@ -34,71 +34,71 @@ auto:
 releases:
   - releaseCycle: "3.7"
     releaseDate: 2024-12-17
-    endOfMaintenance: false
-    endOfLife: false
+    eoas: false
+    eol: false
     lowestSNSVersion: 4.3
     highestSNSVersion: false
 
   - releaseCycle: "3.6"
     releaseDate: 2024-07-30
-    endOfMaintenance: 2025-03-18
-    endOfLife: 2025-06-18
+    eoas: 2025-03-18
+    eol: 2025-06-18
     lowestSNSVersion: 4.3
     highestSNSVersion: 4.8
 
   - releaseCycle: "3.5"
     releaseDate: 2023-11-08
-    endOfMaintenance: 2024-07-30
-    endOfLife: 2024-10-30
+    eoas: 2024-07-30
+    eol: 2024-10-30
     lowestSNSVersion: 3.7.0
     highestSNSVersion: 4.7
 
   - releaseCycle: "3.4"
     releaseDate: 2023-04-11
-    endOfMaintenance: 2023-11-08
-    endOfLife: 2023-11-08
+    eoas: 2023-11-08
+    eol: 2023-11-08
     lowestSNSVersion: 3.7.0
     highestSNSVersion: 4.7
 
   - releaseCycle: "3.3"
     releaseDate: 2022-08-30
-    endOfMaintenance: 2023-04-11
-    endOfLife: 2023-04-11
+    eoas: 2023-04-11
+    eol: 2023-04-11
     lowestSNSVersion: 3.7.0
     highestSNSVersion: 4.7
 
   - releaseCycle: "3.2"
     releaseDate: 2022-05-24
-    endOfMaintenance: 2022-08-30
-    endOfLife: 2022-08-30
+    eoas: 2022-08-30
+    eol: 2022-08-30
     lowestSNSVersion: 3.7.0
     highestSNSVersion: 4.7
 
   - releaseCycle: "3.1"
     releaseDate: 2021-12-03
-    endOfMaintenance: 2022-05-24
-    endOfLife: 2022-05-24
+    eoas: 2022-05-24
+    eol: 2022-05-24
     lowestSNSVersion: 2.5.0
     highestSNSVersion: 4.7
 
   - releaseCycle: "3.0"
     releaseDate: 2021-06-17
-    endOfMaintenance: 2021-02-03
-    endOfLife: 2021-02-03
+    eoas: 2021-02-03
+    eol: 2021-02-03
     lowestSNSVersion: 2.5.0
     highestSNSVersion: 4.7
 
   - releaseCycle: "2"
     releaseDate: 2017-03-31
-    endOfMaintenance: 2021-06-17
-    endOfLife: 2021-06-17
+    eoas: 2021-06-17
+    eol: 2021-06-17
     lowestSNSVersion: 2.5.0
     highestSNSVersion: 4.7
 
   - releaseCycle: "1"
     releaseDate: 2015-12-16
-    endOfMaintenance: 2017-03-31
-    endOfLife: 2017-03-31
+    eoas: 2017-03-31
+    eol: 2017-03-31
     lowestSNSVersion: 2.5.0
     highestSNSVersion: 4.7
 
