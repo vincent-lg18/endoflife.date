@@ -23,6 +23,10 @@
 # - days_toward_eol (in cycles) : number of days toward the EOL of the cycle (optional, only if eol is set)
 # - days_toward_discontinued (in cycles) : number of days toward the discontinuation of the cycle (optional, only if discontinued is set)
 # - days_toward_eoes (in cycles) : number of days toward the end of extended support for the cycle (optional, only if eoes is set)
+
+require_relative 'end-of-life'
+require_relative 'identifier-to-url'
+
 module Jekyll
   class ProductDataEnricher
     class << self
@@ -35,7 +39,10 @@ module Jekyll
         set_id(page)
         set_description(page)
         set_icon_url(page)
+        set_parent(page)
         set_tags(page)
+        set_identifiers_url(page)
+        set_aliases(page)
         set_overridden_columns_label(page)
 
         page.data["releases"].each { |release| enrich_release(page, release) }
@@ -69,6 +76,11 @@ module Jekyll
         end
       end
 
+      # Set the parent page for navigation.
+      def set_parent(page)
+        page.data['parent'] = tag_title(page.data['category'])
+      end
+
       # Explode tags space-separated string to a list if necessary.
       # Also add the category as a default tag.
       def set_tags(page)
@@ -82,6 +94,25 @@ module Jekyll
 
         tags << page.data['category']
         page.data['tags'] = tags.sort
+      end
+
+      # Set alias (derived from alternate_urls).
+      def set_aliases(page)
+        if page.data['alternate_urls']
+          page.data['aliases'] = page.data['alternate_urls'].map { |path| path[1..] }
+        else
+          page.data['alternate_urls'] = [] # should be in a separate method, but easier that way
+          page.data['aliases'] = []
+        end
+      end
+
+      # Set each identifiers URL.
+      def set_identifiers_url(page)
+        for identifier in page.data['identifiers']
+          unless identifier['url']
+            identifier['url'] = IdentifierToUrl.new.render(identifier)
+          end
+        end
       end
 
       # Set properly the column presence/label if it was overridden.
@@ -321,9 +352,12 @@ module Jekyll
         return (date_timestamp - now_timestamp) / (60 * 60 * 24)
       end
 
+      # Template rendering function that replaces placeholders.
+      # The template is stripped to avoid unnecessary whitespaces in the output.
       def render_eol_template(template, cycle)
-        link = template.gsub('__RELEASE_CYCLE__', cycle['releaseCycle'] || '')
+        link = template.strip().gsub('__RELEASE_CYCLE__', cycle['releaseCycle'] || '')
         link.gsub!('__CODENAME__', cycle['codename'] || '')
+        link.gsub!('__RELEASE_DATE__', cycle['releaseDate'].iso8601)
         link.gsub!('__LATEST__', cycle['latest'] || '')
         link.gsub!('__LATEST_RELEASE_DATE__', cycle['latestReleaseDate'] ? cycle['latestReleaseDate'].iso8601 : '')
         return Liquid::Template.parse(link).render(@context)

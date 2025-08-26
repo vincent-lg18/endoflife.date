@@ -1,11 +1,12 @@
 ---
 title: Micronaut Framework
+addedAt: 2022-11-30
 category: framework
 tags: java-runtime
 permalink: /micronaut
 alternate_urls:
--   /micronaut-framework
--   /mn
+  - /micronaut-framework
+  - /mn
 releasePolicyLink: https://micronaut.io/support-schedule/
 changelogTemplate: "https://github.com/micronaut-projects/micronaut-core/releases/tag/v__LATEST__"
 eoasColumn: Active Development
@@ -13,31 +14,31 @@ eolColumn: Active Maintenance
 
 auto:
   methods:
-  -   git: https://github.com/micronaut-projects/micronaut-core.git
+    - git: https://github.com/micronaut-projects/micronaut-core.git
 
 releases:
--   releaseCycle: "4"
+  - releaseCycle: "4"
     releaseDate: 2023-07-11
     eol: false
     eoas: false
-    latest: "4.8.10"
-    latestReleaseDate: 2025-04-15
+    latest: "4.9.10"
+    latestReleaseDate: 2025-08-19
 
--   releaseCycle: "3"
+  - releaseCycle: "3"
     releaseDate: 2021-08-18
     eol: false
     eoas: 2023-07-11
     latest: "3.10.4"
     latestReleaseDate: 2024-03-23
 
--   releaseCycle: "2"
+  - releaseCycle: "2"
     releaseDate: 2020-06-26
     eol: 2023-03-01
     eoas: 2021-08-18
     latest: "2.5.13"
     latestReleaseDate: 2021-09-03
 
--   releaseCycle: "1"
+  - releaseCycle: "1"
     releaseDate: 2018-10-23
     eol: 2021-12-31
     eoas: true

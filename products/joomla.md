@@ -1,5 +1,6 @@
 ---
 title: Joomla!
+addedAt: 2022-11-30
 category: server-app
 tags: php-runtime
 iconSlug: joomla
@@ -9,31 +10,31 @@ changelogTemplate: "https://docs.joomla.org/Special:MyLanguage/Joomla_{{'__LATES
 eoasColumn: true
 
 identifiers:
--   repology: joomla
+  - repology: joomla
 
 auto:
   methods:
-  -   git: https://github.com/joomla/joomla-cms.git
+    - git: https://github.com/joomla/joomla-cms.git
 
 # eol see https://developer.joomla.org/roadmap.html
 releases:
--   releaseCycle: "5"
+  - releaseCycle: "5"
     releaseDate: 2023-10-14
     eoas: false
     eol: 2027-10-19
-    latest: "5.3.0"
-    latestReleaseDate: 2025-04-09
-    # check later for removal: link with changelogTemplate does not work (yet)
+    latest: "5.3.3"
+    latestReleaseDate: 2025-08-13
+    # check later for removal: the link with changelogTemplate does not work (yet)
     link: https://www.joomla.org/announcements/release-news/5900-joomla-5-0-and-joomla-4-4-are-here
 
--   releaseCycle: "4"
+  - releaseCycle: "4"
     releaseDate: 2021-08-17
     eoas: 2024-10-17
     eol: 2025-10-17
     latest: "4.4.13"
     latestReleaseDate: 2025-04-06
 
--   releaseCycle: "3"
+  - releaseCycle: "3"
     releaseDate: 2012-09-27
     eoas: 2021-08-17
     eol: 2023-08-17

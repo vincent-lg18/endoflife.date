@@ -1,5 +1,6 @@
 ---
 title: OpenSearch
+addedAt: 2022-08-26
 category: database
 tags: amazon java-runtime
 iconSlug: opensearch
@@ -11,8 +12,8 @@ eolColumn: Maintenance Support
 
 auto:
   methods:
-  -   git: https://github.com/opensearch-project/OpenSearch.git
-  -   release_table: https://opensearch.org/releases.html
+    - git: https://github.com/opensearch-project/OpenSearch.git
+    - release_table: https://opensearch.org/releases.html
       selector: "table"
       fields:
         releaseCycle: "Major Version"
@@ -30,17 +31,24 @@ auto:
           template: "{{month}} {{day}} {{year}}"
 
 releases:
--   releaseCycle: "2"
-    releaseDate: 2022-05-26
-    eoas: 2025-04-29
+  - releaseCycle: "3"
+    releaseDate: 2025-05-06
+    eoas: false
     eol: false
-    latest: "2.19.1"
-    latestReleaseDate: 2025-02-26
+    latest: "3.2.0"
+    latestReleaseDate: 2025-08-08
 
--   releaseCycle: "1"
+  - releaseCycle: "2"
+    releaseDate: 2022-05-26
+    eoas: 2025-05-06
+    eol: false
+    latest: "2.19.3"
+    latestReleaseDate: 2025-07-18
+
+  - releaseCycle: "1"
     releaseDate: 2021-07-12
     eoas: 2022-05-26
-    eol: 2025-04-29 # upcoming support(2) at least 1 year
+    eol: 2025-05-06 # upcoming support(2) at least 1 year
     latest: "1.3.20"
     latestReleaseDate: 2024-12-10
 
@@ -55,19 +63,21 @@ releases:
 
 **Active Development**: The latest major version receives new features, bug fixes, and security patches.
 **Maintenance Support**: includes bug fixes and security patches. New features might be back-ported as
-  community contributions, but will not result in new releases.
+community contributions, but will not result in new releases.
 
 By default, versions remain under maintenance until the next major version enters maintenance with
 a minimum guarantee of a year. Therefore, at any given time, the current major version and previous
 major version are both supported, as well as older major versions that have been in maintenance
 for less than 12 months.
 
-OpenSearch 1.x will end Maintenance Support once 3.0 is released.
+OpenSearch 1.x has been deprecated since 2025-05-06.
+
+OpenSearch 2.x will end Maintenance Support once 4.0 is released.
 
 ## Versioning
 
 OpenSearch only releases breaking changes in major versions. All minor versions are compatible with
-every other minor version for that major release. When new major versions are released the previous
+every other minor version for that major release. When new major versions are released, the previous
 major version enters maintenance, with only bug fixes and security patches.
 
 The duration of the maintenance window will vary from release to release. By default, versions will
